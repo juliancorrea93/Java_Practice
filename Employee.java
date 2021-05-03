@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.correajulian.capgemini;
 
 /**
@@ -25,5 +20,15 @@ public class Employee {
     public int getempid() {
         return empId;
     }
-    //You can generate getters and setters within STS
+    //Regional and Manager classes cannot access this as they are in a different package
+    void takeLunch() {
+        System.out.println("Employee has taken lunch");
+    }
+    public void attendMeetings() {
+        System.out.println("Meetings attended from employee method");
+    }
+    //Regional and Manager classes cannot access this as they are in a different package
+    protected void talkWithManager() {
+        System.out.println("Manager spoken to, employee method");
+    }
 }
